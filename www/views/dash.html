@@ -1,0 +1,41 @@
+<ion-view view-title="Dashboard">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-plus-outline" on-tap="openAddLocation()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-divider">Rize</ion-item>
+      <ion-item>
+        Bu gün
+      </ion-item>
+      <ion-item>
+        Yarın
+      </ion-item>
+      <ion-item>
+        Salı
+      </ion-item>
+      <ion-item class="item-divider">İstanbul</ion-item>
+      <ion-item>
+        Bu gün
+      </ion-item>
+      <ion-item>
+        Yarın
+      </ion-item>
+      <ion-item>
+        Salı
+      </ion-item>
+    </ion-list>
+
+    <!-- Add Location -->
+    <script id="addLocation.html" type="text/ng-template">
+      <ion-modal-view>
+        <div ng-include="'views/addLocation.html'"></div>
+      </ion-modal-view>
+    </script>
+    <!-- END -->
+
+  </ion-content>
+</ion-view>
