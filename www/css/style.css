@@ -1,3 +1,7 @@
 .bar-subheader {
     padding: 0;
 }
+
+ion-item p {
+  float: right;
+}

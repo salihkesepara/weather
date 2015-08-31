@@ -1,32 +1,19 @@
-<ion-view view-title="Dashboard">
-  <ion-nav-buttons side="left">
-    <button class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
+<ion-view view-title="Weather">
   <ion-nav-buttons side="right">
     <button class="button button-icon icon ion-ios-plus-outline" on-tap="openAddLocation()"></button>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content ng-init="selectLocation(locations.defaultLocation)">
     <ion-list>
-      <ion-item class="item-divider">Rize</ion-item>
-      <ion-item>
-        Bu gün
-      </ion-item>
-      <ion-item>
-        Yarın
-      </ion-item>
-      <ion-item>
-        Salı
-      </ion-item>
-      <ion-item class="item-divider">İstanbul</ion-item>
-      <ion-item>
-        Bu gün
-      </ion-item>
-      <ion-item>
-        Yarın
-      </ion-item>
-      <ion-item>
-        Salı
-      </ion-item>
+      <div ng-repeat="item in data">
+        <ion-item class="item-divider">
+          {{item.city}}
+          <p on-tap="deleteItem($index)">delete</p>
+        </ion-item>
+        <ion-item ng-repeat="item in item.temp">
+          {{item.date}}
+          <p>{{item.temp}} °C</p>
+        </ion-item>
+      </div>
     </ion-list>
 
     <!-- Add Location -->

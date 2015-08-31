@@ -6,11 +6,14 @@ angular.module('services.injects', [
 
 // Services
 'services.nav',
+'services.cities',
+'services.months',
+'services.loading',
 
 // Remote
 'remote.config',
 'remote.http',
 
 // Request
-'request.getUserUsage',
+'request.getWeatherList',
 ])
